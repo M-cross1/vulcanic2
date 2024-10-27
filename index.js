@@ -31,7 +31,7 @@ const {
 	fetchJson,
 	sleep,
 	question
-} = require("./lib/MyFunction");
+} = require("./lib/myfynction.js");
 try {
 	var {
 		Low,
@@ -41,7 +41,7 @@ try {
 	var {
 		Low,
 		JSONFile
-	} = require("./lib/lowdb")
+	} = require("./lib/lowdb.js")
 }
 	
 const yargs = require("yargs/yargs")
