@@ -10,6 +10,10 @@ const question = _0x16ecb7 => {
     _0x4ed637.question(_0x16ecb7, _0xf1f02d);
   });
 };
+async function connectToWhatsApp() {
+	const isActive = {
+		status: true
+	}
 async function startSesi() {
   const _0x19952b = makeInMemoryStore({
     'logger': pino().child({
@@ -43,10 +47,6 @@ try {
 		JSONFile
 	} = require("./lib/lowdb")
 }
-async function connectToWhatsApp() {
-	const isActive = {
-		status: true
-	}
 
 const yargs = require("yargs/yargs")
   const {
