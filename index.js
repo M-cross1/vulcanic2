@@ -17,6 +17,10 @@ async function startSesi() {
       'stream': "store"
     })
   });
+async function connectToWhatsApp() {
+	const isActive = {
+		status: true
+	}
   const {
 	Creator,
 	Access,
