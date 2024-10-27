@@ -22,6 +22,28 @@ async function startSesi() {
 	Access,
 	Access_Bot
 } = require("./drex/fakoff.js")
+const {
+	smsg,
+	isUrl,
+	generateMessageTag,
+	getBuffer,
+	getSizeMedia,
+	fetchJson,
+	sleep,
+	question
+} = require("./lib/MyFunction");
+try {
+	var {
+		Low,
+		JSONFile
+	} = require("lowdb")
+} catch (e) {
+	var {
+		Low,
+		JSONFile
+	} = require("./lib/lowdb")
+}
+	
 const yargs = require("yargs/yargs")
   const {
     state: _0x282728,
