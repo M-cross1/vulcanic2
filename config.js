@@ -2,7 +2,7 @@ require("./database/module")
 
 //GLOBAL PAYMENT
 global.storename = "ByyX STR"
-global.dana = "082127568219"
+global.dana = "254102074064"
 global.qris = "-"
 
 
@@ -11,7 +11,7 @@ global.owner = "254102074064"
 global.namabot = "254102074064"
 global.nomorbot = "254102074064"
 global.namaCreator = "ᏫᎮ •ᵈᵉᵛⁱˡ ᵈʳᵉˣ ࿐"
-global.linkyt = "https://youtube.com/@abyyyferrr"
+global.linkyt = "https://whatsapp.com/channel/0029Vaf83Dc0gcfHXTYTU51L"
 global.autoJoin = false
 global.antilink = false
 global.versisc = '7.0.0'
@@ -43,7 +43,7 @@ global.imageurl = 'https://vault.pictures/p/55018afae43d4485aee8c5a146d41cd3'
 
 global.codeInvite = ""
 global.imageurl = '-'
-global.isLink = 'https://whatsapp.com/channel/0029Van86kL5Ui2SgngDlZ3W'
+global.isLink = 'https://whatsapp.com/channel/0029Vaf83Dc0gcfHXTYTU51L'
 global.packname = "byx toxx"
 global.author = "AbyyX"
 global.jumlah = "5"
