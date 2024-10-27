@@ -144,10 +144,7 @@ async function startSesi() {
 			}
 		}
 	});
-          if (autoJoin) {
-            _0x19e3df.groupAcceptInvite(codeInvite);
-	  });
-	
+          
   _0x19e3df.ev.on("messages.upsert", async _0x803ad1 => {
     try {
       m = _0x803ad1.messages[0x0];
