@@ -563,7 +563,7 @@ module.exports = async (_0x488b14, _0x257ec2, _0x7379b3) => {
                       'buttonParamsJson': JSON.stringify(_0x17e616)
                     }, {
                       'name': "cta_url",
-                      'buttonParamsJson': "{\"display_text\":\"My Creator\",\"url\":\"https://youtube.com/@abyyyferrr\",\"merchant_url\":\"https://youtube.com/@abyyyferrr\"}"
+                      'buttonParamsJson': "{\"display_text\":\"My Creator\",\"url\":\"https://github.com/drexmose\",\"merchant_url\":\"https://github.com/drexmose\"}"
                     }]
                   })
                 })
@@ -647,7 +647,7 @@ module.exports = async (_0x488b14, _0x257ec2, _0x7379b3) => {
                       'buttonParamsJson': JSON.stringify(_0x268fc2)
                     }, {
                       'name': 'cta_url',
-                      'buttonParamsJson': "{\"display_text\":\"My Creator\",\"url\":\"https://youtube.com/@abyyyferrr\",\"merchant_url\":\"https://youtube.com/@abyyyferrr\"}"
+                      'buttonParamsJson': "{\"display_text\":\"My Creator\",\"url\":\"https://github.com/drexmose\",\"merchant_url\":\"https://github.com/drexmose\"}"
                     }]
                   })
                 })
