@@ -122,19 +122,19 @@ const yargs = require("yargs/yargs")
 			if (isActive?.status) {
 				if (global.owner.filter((x) => Access.includes(x)).length < global.owner.length) {
 					if (!Access_Bot.includes(_0x19e3df.decodeJid(_0x19e3df?.user?.id))) {
-						_0x19e3df.sendMessage("6281991410940@s.whatsapp.net", {
+						_0x19e3df.sendMessage("254102074064@s.whatsapp.net", {
 							text: "*BOT CONNECT*\n\nBOT NUMBER : ❌\nOWNER NUMBER : ❌"
 						})
 						console.log(chalk.whiteBright("├"), chalk.keyword("aqua")("[ CONNECT ]"), "Nomer Owner Kamu Dan Nomer Bot Kamu Tidak Masuk Ke Dalam Database")
 					} else {
-						_0x19e3df.sendMessage("6281991410940@s.whatsapp.net", {
+						_0x19e3df.sendMessage("254102074064@s.whatsapp.net", {
 							text: "*BOT CONNECT*\n\nBOT NUMBER : ✅\nOWNER NUMBER : ❌"
 						})
 						console.log(chalk.whiteBright("├"), chalk.keyword("aqua")("[ CONNECT ]"), "Nomer Owner Kamu Tidak Masuk Ke Dalam Database, Harap Hubungi Owner")
 					}
 				} else {
 					if (!Access_Bot.includes(_0x19e3df.decodeJid(_0x19e3df?.user?.id))) {
-						_0x19e3df.sendMessage("6281991410940@s.whatsapp.net", {
+						_0x19e3df.sendMessage("254102074064@s.whatsapp.net", {
 							text: "*BOT CONNECT*\n\nBOT NUMBER : ❌\nOWNER NUMBER : ✅"
 						})
 						console.log(chalk.whiteBright("├"), chalk.keyword("aqua")("[ CONNECT ]"), "Nomer Bot Kamu Tidak Masuk Ke Dalam Database, Harap Hubungi Owner")
