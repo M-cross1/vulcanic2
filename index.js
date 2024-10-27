@@ -31,7 +31,7 @@ const {
 	fetchJson,
 	sleep,
 	question
-} = require("./lib/myfynction");
+} = require("./lib/myfunction");
 try {
 	var {
 		Low,
