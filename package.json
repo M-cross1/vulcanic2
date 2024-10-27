@@ -25,7 +25,6 @@
     "fake-useragent": "^1.0.1",
     "file-type": "^16.5.3",
     "fluent-ffmpeg": "^2.1.2",
-    "human-readable": "^0.2.1",
     "javascript-obfuscator": "^4.0.0",
     "jimp": "^0.16.1",
     "knights-canvas": "github:KirBotz/knights-canvas",
@@ -42,6 +41,7 @@
     "readline": "^1.3.0",
     "request": "^2.88.2",
     "rimraf": "^3.0.2",
+    "steno": "^0.0.1",
     "spinnies": "^0.5.1",
     "ssh2": "^1.14.0",
     "util": "^0.12.5"
