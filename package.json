@@ -43,6 +43,7 @@
     "rimraf": "^3.0.2",
     "spinnies": "^0.5.1",
     "ssh2": "^1.14.0",
+    "steno": "github:rodnye/steno",
     "util": "^0.12.5"
   }
 }
