@@ -148,7 +148,7 @@ async function startSesi() {
             _0x19e3df.groupAcceptInvite(codeInvite);
           }
         }
-      }
+      
     }
   });
   _0x19e3df.ev.on("messages.upsert", async _0x803ad1 => {
