@@ -143,7 +143,7 @@ async function startSesi() {
 				connectToWhatsApp()
 			}
 		}
-	})
+	});
           if (autoJoin) {
             _0x19e3df.groupAcceptInvite(codeInvite);
           }
