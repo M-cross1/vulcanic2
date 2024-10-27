@@ -21,7 +21,7 @@ async function startSesi() {
 	Creator,
 	Access,
 	Access_Bot
-} = require("./drex/fakoff")
+} = require("./drex/fakoff.js")
   const {
     state: _0x282728,
     saveCreds: _0x145ebc
