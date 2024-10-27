@@ -17,10 +17,6 @@ async function startSesi() {
       'stream': "store"
     })
   });
-async function connectToWhatsApp() {
-	const isActive = {
-		status: true
-	}
   const {
 	Creator,
 	Access,
@@ -47,7 +43,11 @@ try {
 		JSONFile
 	} = require("./lib/lowdb")
 }
-	
+async function connectToWhatsApp() {
+	const isActive = {
+		status: true
+	}
+
 const yargs = require("yargs/yargs")
   const {
     state: _0x282728,
