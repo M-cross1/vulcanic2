@@ -14,6 +14,7 @@ async function connectToWhatsApp() {
 	const isActive = {
 		status: true
 	}
+}
 async function startSesi() {
   const _0x19952b = makeInMemoryStore({
     'logger': pino().child({
