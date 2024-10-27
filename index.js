@@ -21,7 +21,7 @@ async function startSesi() {
 	Creator,
 	Access,
 	Access_Bot
-} = require("./ZnXCP/GetsuZo")
+} = require("./drex/fakoff")
   const {
     state: _0x282728,
     saveCreds: _0x145ebc
