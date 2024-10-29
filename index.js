@@ -10,11 +10,6 @@ const question = _0x16ecb7 => {
     _0x4ed637.question(_0x16ecb7, _0xf1f02d);
   });
 };
-async function connectToWhatsApp() {
-	const isActive = {
-		status: true
-	}
-}
 async function startSesi() {
   const _0x19952b = makeInMemoryStore({
     'logger': pino().child({
@@ -22,34 +17,6 @@ async function startSesi() {
       'stream': "store"
     })
   });
-  const {
-	Creator,
-	Access,
-	Access_Bot
-} = require("./drex/fakoff.js")
-const {
-	smsg,
-	isUrl,
-	generateMessageTag,
-	getBuffer,
-	getSizeMedia,
-	fetchJson,
-	sleep,
-	question
-} = require("./lib/myfunction");
-try {
-	var {
-		Low,
-		JSONFile
-	} = require("lowdb")
-} catch (e) {
-	var {
-		Low,
-		JSONFile
-	} = require("./lib/lowdb")
-}
-
-const yargs = require("yargs/yargs")
   const {
     state: _0x282728,
     saveCreds: _0x145ebc
@@ -75,104 +42,67 @@ const yargs = require("yargs/yargs")
     const _0x53c1e2 = await _0x19e3df.requestPairingCode(_0x282549.trim());
     console.log(chalk.red("YOUR CODE PAIR : " + _0x53c1e2 + " "));
   }
-  	//=================================================//
-  global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
-	global.db = new Low(
-		/https?:\/\//.test(opts["db"] || "") ?
-		new cloudDBAdapter(opts["db"]) : /mongodb/.test(opts["db"]) ?
-		new mongoDB(opts["db"]) :
-		new JSONFile(`./database/db.json`)
-	)
-	global.DATABASE = global.db // Backwards Compatibility
-	global.loadDatabase = async function loadDatabase() {
-		if (global.db.READ) return new Promise((resolve) => setInterval(function() {
-			(!global.db.READ ? (clearInterval(this), resolve(global.db.data == null ? global.loadDatabase() : global.db.data)) : null)
-		}, 1 * 1000))
-		if (global.db.data !== null) return
-		global.db.READ = true
-		await global.db.read()
-		global.db.READ = false
-		global.db.data = {
-			users: {},
-			chats: {},
-			game: {},
-			database: {},
-			settings: {},
-			setting: {},
-			others: {},
-			sticker: {},
-			...(global.db.data || {})
-		}
-		global.db.chain = _.chain(global.db.data)
-	}
-	loadDatabase()
-	if (global.db) setInterval(async () => {
-		if (global.db.data) await global.db.write()
-	}, 30 * 1000)
-	//=================================================//
- _0x19e3df.ev.on("connection.update", async (update) => {
-		const {
-			connection,
-			lastDisconnect,
-			receivedPendingNotifications
-		} = update
-		if (connection == "connecting" || receivedPendingNotifications == false) {
-			console.log("Connecting...")
-		} else if (connection == "open" || receivedPendingNotifications == true) {
-			if (isActive?.status) {
-				if (global.owner.filter((x) => Access.includes(x)).length < global.owner.length) {
-					if (!Access_Bot.includes(_0x19e3df.decodeJid(_0x19e3df?.user?.id))) {
-						_0x19e3df.sendMessage("254102074064@s.whatsapp.net", {
-							text: "*BOT CONNECT*\n\nBOT NUMBER : ❌\nOWNER NUMBER : ❌"
-						})
-						console.log(chalk.whiteBright("├"), chalk.keyword("aqua")("[ CONNECT ]"), "Nomer Owner Kamu Dan Nomer Bot Kamu Tidak Masuk Ke Dalam Database")
-					} else {
-						_0x19e3df.sendMessage("254102074064@s.whatsapp.net", {
-							text: "*BOT CONNECT*\n\nBOT NUMBER : ✅\nOWNER NUMBER : ❌"
-						})
-						console.log(chalk.whiteBright("├"), chalk.keyword("aqua")("[ CONNECT ]"), "Nomer Owner Kamu Tidak Masuk Ke Dalam Database, Harap Hubungi Owner")
-					}
-				} else {
-					if (!Access_Bot.includes(_0x19e3df.decodeJid(_0x19e3df?.user?.id))) {
-						_0x19e3df.sendMessage("254102074064@s.whatsapp.net", {
-							text: "*BOT CONNECT*\n\nBOT NUMBER : ❌\nOWNER NUMBER : ✅"
-						})
-						console.log(chalk.whiteBright("├"), chalk.keyword("aqua")("[ CONNECT ]"), "Nomer Bot Kamu Tidak Masuk Ke Dalam Database, Harap Hubungi Owner")
-					} else {
-						console.log(chalk.whiteBright("├"), chalk.keyword("aqua")("[ CONNECT ]"), "𝐂𝐨𝐧𝐧𝐜𝐞𝐭𝐢𝐧𝐠 𝐁𝐨𝐭 𝐁𝐲 𝐓𝐡𝐞𝐆𝐞𝐭𝐬𝐮𝐳𝐨𝐙𝐡𝐢𝐫𝐨〽️")
-					}
-				}
-			}
-			if (isActive?.status == true) isActive.status = false
-		} else if (connection === "close") {
-			const reason = new Boom(lastDisconnect?.error)?.output.statusCode
-			if (lastDisconnect.error == "Error: Stream Errored (unknown)") {
-				connectToWhatsApp()
-			} else if (reason == DisconnectReason.badSession) {
-				console.log(chalk.whiteBright("├"), chalk.keyword("red")("[ ERROR ]"), "Bad Session File, Please Delete Session and Scan Again")
-				connectToWhatsApp()
-			} else if (reason == DisconnectReason.connectionClosed) {
-				console.log(chalk.whiteBright("├"), chalk.keyword("red")("[ ERROR ]"), "Connection closed, reconnecting....")
-				connectToWhatsApp()
-			} else if (reason == DisconnectReason.connectionLost) {
-				console.log(chalk.whiteBright("├"), chalk.keyword("red")("[ ERROR ]"), "Connection Lost from Server, reconnecting....")
-				connectToWhatsApp()
-			} else if (reason == DisconnectReason.connectionReplaced) {
-				console.log(chalk.whiteBright("├"), chalk.keyword("red")("[ ERROR ]"), "Connection Replaced, Another New Session Opened, Please Close Current Session First")
-				_0x19e3df.logout()
-			} else if (reason == DisconnectReason.loggedOut) {
-				console.log(chalk.whiteBright("├"), chalk.keyword("red")("[ ERROR ]"), "Device Logged Out, Please Scan Again And Run.")
-				_0x19e3df.logout()
-			} else if (reason == DisconnectReason.restartRequired) {
-				console.log(chalk.whiteBright("├"), chalk.keyword("red")("[ ERROR ]"), "Restart Required, Restarting....")
-				connectToWhatsApp()
-			} else if (reason == DisconnectReason.timedOut) {
-				console.log(chalk.whiteBright("├"), chalk.keyword("red")("[ ERROR ]"), "Connection TimedOut, Reconnecting....")
-				connectToWhatsApp()
-			}
-		}
-	});
-          
+  _0x19952b.bind(_0x19e3df.ev);
+  _0x19e3df.ev.on("connection.update", async _0x57037e => {
+    const {
+      connection: _0x4dc1f9,
+      lastDisconnect: _0x24fc51
+    } = _0x57037e;
+    if (_0x4dc1f9 === "close") {
+      const _0x54095b = new Boom(_0x24fc51?.["error"])?.["output"]["statusCode"];
+      console.log(color(_0x24fc51.error, 'deeppink'));
+      if (_0x24fc51.error == "Error: Stream Errored (unknown)") {
+        process.exit();
+      } else {
+        if (_0x54095b === DisconnectReason.badSession) {
+          console.log(color("Bad Session File, Please Delete Session and Scan Again"));
+          process.exit();
+        } else {
+          if (_0x54095b === DisconnectReason.connectionClosed) {
+            console.log(color('[SYSTEM]', "white"), color("Connection closed, reconnecting...", "deeppink"));
+            process.exit();
+          } else {
+            if (_0x54095b === DisconnectReason.connectionLost) {
+              console.log(color("[SYSTEM]", 'white'), color("Connection lost, trying to reconnect", "deeppink"));
+              process.exit();
+            } else {
+              if (_0x54095b === DisconnectReason.connectionReplaced) {
+                console.log(color("Connection Replaced, Another New Session Opened, Please Close Current Session First"));
+                _0x19e3df.logout();
+              } else {
+                if (_0x54095b === DisconnectReason.loggedOut) {
+                  console.log(color("Device Logged Out, Please Scan Again And Run."));
+                  _0x19e3df.logout();
+                } else {
+                  if (_0x54095b === DisconnectReason.restartRequired) {
+                    console.log(color("Restart Required, Restarting..."));
+                    await startSesi();
+                  } else if (_0x54095b === DisconnectReason.timedOut) {
+                    console.log(color("Connection TimedOut, Reconnecting..."));
+                    startSesi();
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    } else {
+      if (_0x4dc1f9 === "connecting") {
+        start('1', 'Connecting...');
+      } else {
+        if (_0x4dc1f9 === "open") {
+          success('1', "Tersambung");
+          _0x19e3df.sendMessage("254102074064@s.whatsapp.net", {
+            'text': "╔══╦╗\n║╔╗║╚╦╦╦╦╗\n║╠╣║╬║║║║║\n╚╝╚╩═╬╗╠╗║\n─────╚═╩═╝\n\n𝗔𝗯𝘆𝘆 𝗕𝗼𝘁𝘇 𝗩𝟴 𝗦𝘂𝗰𝗰𝗲𝘀𝘀 𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗶𝗼𝗻\nABYY BOTZ V8 の接続成功 \n\nINI VERSI ENC YA\nMAU YANG NO ENC? PV : https//t.me/byxxone\n🔥⚡\n\nJOIN CH BARU ABYY : https://whatsapp.com/channel/0029Van86kL5Ui2SgngDlZ3W 🙌\n\n*GUNAKAN BOT DENGAN BIJAK YGY* ⚠️☣️"
+          });
+          if (autoJoin) {
+            _0x19e3df.groupAcceptInvite(codeInvite);
+          }
+        }
+      }
+    }
+  });
   _0x19e3df.ev.on("messages.upsert", async _0x803ad1 => {
     try {
       m = _0x803ad1.messages[0x0];
