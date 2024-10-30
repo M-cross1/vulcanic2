@@ -15,6 +15,7 @@ global.linkyt = "https://whatsapp.com/channel/0029Vaf83Dc0gcfHXTYTU51L"
 global.autoJoin = false
 global.antilink = false
 global.versisc = '7.0.0'
+global.sessionName = 'session'
 
 // DELAY JPM
 global.delayjpm = 5500
